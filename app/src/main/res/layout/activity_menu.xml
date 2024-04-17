@@ -23,24 +23,27 @@
         <ImageButton
             android:layout_width="250sp"
             android:layout_height="150sp"
+            android:id="@+id/Fundas"
             android:layout_marginBottom="5dp"
             android:src="@drawable/fundastit" />
         <ImageButton
             android:layout_width="250sp"
             android:layout_height="150sp"
+            android:id="@+id/Audif"
             android:layout_marginTop="15dp"
             android:layout_marginBottom="5dp"
             android:src="@drawable/audifonos2" />
         <ImageButton
             android:layout_width="250sp"
             android:layout_height="150sp"
+            android:id="@+id/Otro"
             android:layout_marginTop="15dp"
             android:layout_marginBottom="5dp"
             android:src="@drawable/aud_fonos"/>
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/Regresar"
+            android:id="@+id/Pagar"
             android:text="Pagar"
             android:layout_marginLeft="100dp"
             android:layout_marginTop="40dp"/>
