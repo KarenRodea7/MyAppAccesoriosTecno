@@ -22,7 +22,7 @@ public class Descripcion extends AppCompatActivity {
     ImageButton mas, men;
     EditText cant;
 
-    int val, valP, sum1=0, Total, prec, Totf;
+    int val, valP, sum1, Total, prec, Totf;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,46 +46,46 @@ public class Descripcion extends AppCompatActivity {
                 des.setText("Funda de componentes\n\n" + "Funda de componentes de celular para iPhone 14 Pro, Zero One.\n" + "Color: Negro\n\n"+"$200");
                 prec=200;
             }
-            if(valP==2){
+            else if(valP==2){
                 ima.setImageResource(R.drawable.img_4);
                 des.setText("Funda de mariposas\n\n"+"Funda de teléfono con mariposa de onda brillante y pulsera para iPhone.\n" + "Color: Morado\n\n"+"$120");
                 prec=120;
             }
-            if(valP==3){
+            else if(valP==3){
                 ima.setImageResource(R.drawable.img_5);
                 des.setText("Funda de astronauta\n\n"+"Funda para teléfono Motorola con soporte de Astronauta y correa.\n" + "Color: Negro\n\n$160");
                 prec=160;
             }
         }
-        if(val==2){
+        else if(val==2){
             if(valP==1) {
                 ima.setImageResource(R.drawable.img_6);
                 des.setText("Audifonos de gato negro\n\n" + "Audifonos bluetooth inalambricos de diadema con radio FM, diseño de Gato negro.\n" + "Color: Negro\n\n$270");
                 prec=270;
             }
-            if(valP==2){
+            else if(valP==2){
                 ima.setImageResource(R.drawable.img_7);
                 des.setText("Audifonos deportivos\n\n"+"Audífonos TWS inalámbricos deportivos con micrófono, intrauditivos con cancelación de ruido y manos libres.\n" + "Color: Multicolor\n\n$100");
                 prec=100;
             }
-            if(valP==3){
+            else if(valP==3){
                 ima.setImageResource(R.drawable.img_8);
                 des.setText("Audifonos con banda para cuello\n\n"+"Audífonos inalámbricos intraauriculares con banda para el cuello y micrófono para llamadas con manos libres.\n" + "Color: Negro\n\n$170");
                 prec=170;
             }
         }
-        if(val==3){
+        else if(val==3){
             if(valP==1) {
                 ima.setImageResource(R.drawable.img);
                 des.setText("Teclado flexible\n\n" + "Teclado flexible y plegable de Silicona resistente al agua para juegos USB mudo con 85 teclas. \n" + "Color: Negro\n\n$210");
                 prec=210;
             }
-            if(valP==2){
+            else if(valP==2){
                 ima.setImageResource(R.drawable.img_1);
                 des.setText("Teclado mini\n\n"+"Teclado mini con retroiluminación de 7 colores y touchpad con efecto de marquesina. \n" + "Color: Negro\n\n$160");
                 prec=160;
             }
-            if(valP==3){
+            else if(valP==3){
                 ima.setImageResource(R.drawable.img_2);
                 des.setText("Teclado inalámbrico\n\n"+"Teclado bluetooth inalámbrico con Touchpad integrado, multi-dispositivo con soporte para TV, teléfono tableta.\n" + "Color: Negro\n\n$300");
                 prec=300;
@@ -98,8 +98,10 @@ public class Descripcion extends AppCompatActivity {
                 if(sum1>0){
                     sum1--;
                     cant.setText(String.valueOf(sum1));
+                    Gsum1(sum1);
                 }
                 Total=sum1*prec;
+                GTot(Total);
                 tot.setText("Total: $"+Total);
             }
         });
@@ -109,7 +111,9 @@ public class Descripcion extends AppCompatActivity {
             public void onClick(View v) {
                 sum1++;
                 cant.setText(String.valueOf(sum1));
+                Gsum1(sum1);
                 Total= sum1*prec;
+                GTot(Total);
                 tot.setText("Total: $"+Total);
             }
         });
@@ -130,11 +134,24 @@ public class Descripcion extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(getApplicationContext(), Pagar.class);
                 Totf = Totf+Total;
+                GTotf(Totf);
                 startActivity(i);
             }
         });
 
 
+    }
+    private void GTot(int Total) {
+        preferences=getSharedPreferences("Variables", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.putString("Total", String.valueOf(Total));
+        editor.commit();
+    }
+    private void Gsum1(int sum1) {
+        preferences=getSharedPreferences("Variables", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.putString("sum1", String.valueOf(sum1));
+        editor.commit();
     }
 
     private void GTotf(int totf) {
@@ -149,5 +166,8 @@ public class Descripcion extends AppCompatActivity {
         val = Integer.parseInt(preferences.getString("val", "0"));
         valP = Integer.parseInt(preferences.getString("valP", "0"));
         Totf = Integer.parseInt(preferences.getString("totf", "0"));
+        sum1 = Integer.parseInt(preferences.getString("sum1", "0"));
+        cant.setText(String.valueOf(sum1));
+        Total = Integer.parseInt(preferences.getString("Total", "0"));
     }
 }
