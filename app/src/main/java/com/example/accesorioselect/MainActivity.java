@@ -2,7 +2,9 @@ package com.example.accesorioselect;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -11,9 +13,11 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
+    SharedPreferences preferences;
+
     Button Registro, btnIniciar;
     EditText user, pass;
-    int sum;
+    int sum, usu, pswd, nom;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +29,8 @@ public class MainActivity extends AppCompatActivity {
         user = (EditText)findViewById(R.id.User);
         pass = (EditText)findViewById(R.id.Pass);
 
+        leerOpc();
+
         btnIniciar.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View view) {
@@ -35,9 +41,9 @@ public class MainActivity extends AppCompatActivity {
                     String datos = user.getText().toString();
                     String contr = pass.getText().toString();
 
-                    if(datos.equals("1") & contr.equals("1")){
+
+                    if(datos.equals(usu) & contr.equals(pswd)){
                         startActivity(intent);
-                        Toast.makeText(getApplicationContext(), "Bienvenido al Menú "+datos, Toast.LENGTH_LONG).show();
                     }else {
                         Toast.makeText(getApplicationContext(),"Cuenta o contraseña incorrectos, te quedan:  " +(3-sum)+" Intentos",Toast.LENGTH_SHORT).show();
                     }
@@ -55,5 +61,11 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
+    }
+    private void leerOpc() {
+        preferences = getSharedPreferences("Credenciales", Context.MODE_PRIVATE);
+        usu = Integer.parseInt(preferences.getString("user", "0"));
+        pswd = Integer.parseInt(preferences.getString("pass", "0"));
+        nom = Integer.parseInt(preferences.getString("nombre", "0"));
     }
 }

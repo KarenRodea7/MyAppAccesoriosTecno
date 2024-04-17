@@ -15,11 +15,20 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:id="@+id/Nom"
+            android:textColor="#000"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:text=""
+            android:layout_marginBottom="10dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:textColor="#000"
             android:textSize="25sp"
             android:textStyle="bold"
             android:text=" Elige una categoría "
-            android:layout_marginBottom="50dp"/>
+            android:layout_marginBottom="30dp"/>
         <ImageButton
             android:layout_width="250sp"
             android:layout_height="150sp"
@@ -39,10 +48,11 @@
             android:id="@+id/Otro"
             android:layout_marginTop="15dp"
             android:layout_marginBottom="5dp"
-            android:src="@drawable/aud_fonos"/>
+            android:src="@drawable/teclados"/>
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginVertical="20dp"
             android:id="@+id/Pagar"
             android:text="Pagar"
             android:layout_marginLeft="100dp"

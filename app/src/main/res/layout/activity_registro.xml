@@ -56,14 +56,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginBottom="25dp"
-                    android:text="Teléfono: "
+                    android:text="Dirección: "
                     android:textColor="#ffffff"
                     android:textSize="20dp" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginBottom="65dp"
-                    android:text="Dirección: "
+                    android:text=""
                     android:textColor="#ffffff"
                     android:textSize="20dp" />
 
@@ -75,6 +75,7 @@
                 <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:id="@+id/Nom"
                     android:layout_marginBottom="5dp"
                     android:hint="Ingresar nombre"
                     android:textColorHint="#C4FFFFFF"
@@ -83,6 +84,7 @@
                 <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:id="@+id/Usuario"
                     android:layout_marginBottom="9dp"
                     android:hint="Ingresar usuario"
                     android:textColorHint="#C4FFFFFF"
@@ -91,6 +93,7 @@
                 <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:id="@+id/Pass"
                     android:layout_marginBottom="7dp"
                     android:hint="Ingresar contraseña"
                     android:inputType="textPassword"
@@ -100,16 +103,17 @@
                 <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:id="@+id/Direc"
                     android:layout_marginBottom="8dp"
-                    android:hint="Ingresar teléfono"
-                    android:inputType="phone"
+                    android:hint="Ingresar dirección"
                     android:textColorHint="#C4FFFFFF"
                     android:textColor="#ffffff"
                     android:textSize="18dp"/>
                 <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:hint="Ingresar dirección"
+                    android:hint=""
+                    android:inputType="phone"
                     android:textColorHint="#C4FFFFFF"
                     android:textColor="#ffffff"
                     android:textSize="18dp"/>
