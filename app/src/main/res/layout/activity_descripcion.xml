@@ -29,8 +29,8 @@
             android:scaleType="centerCrop"
             android:layout_marginBottom="40dp"/>
         <TextView
-            android:layout_width="220dp"
-            android:layout_height="150dp"
+            android:layout_width="260dp"
+            android:layout_height="170dp"
             android:id="@+id/Descrip"
             android:text="Descripción"
             android:textSize="18dp"
