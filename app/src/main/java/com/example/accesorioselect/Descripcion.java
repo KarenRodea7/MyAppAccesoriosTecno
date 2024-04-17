@@ -43,54 +43,55 @@ public class Descripcion extends AppCompatActivity {
         if(val==1){
             if(valP==1) {
                 ima.setImageResource(R.drawable.img_3);
-                des.setText("Funda de componentes\n\n" + "Funda de componentes de celular para iPhone 14 Pro, Zero One.\n" + "Color: Negro\n\n"+"$200");
+                des.setText("Funda de componentes\n\n" + "Funda de componentes de celular para iPhone 14 Pro, Zero One.\n" + "Color: Negro\n" + "$200");
                 prec=200;
             }
             else if(valP==2){
                 ima.setImageResource(R.drawable.img_4);
-                des.setText("Funda de mariposas\n\n"+"Funda de teléfono con mariposa de onda brillante y pulsera para iPhone.\n" + "Color: Morado\n\n"+"$120");
+                des.setText("Funda de mariposas\n\n"+"Funda de teléfono con mariposa de onda brillante y pulsera para iPhone.\n" + "Color: Morado\n"+"$120");
                 prec=120;
             }
             else if(valP==3){
                 ima.setImageResource(R.drawable.img_5);
-                des.setText("Funda de astronauta\n\n"+"Funda para teléfono Motorola con soporte de Astronauta y correa.\n" + "Color: Negro\n\n$160");
+                des.setText("Funda de astronauta\n\n"+"Funda para teléfono Motorola con soporte de Astronauta y correa.\n" + "Color: Negro\n$160");
                 prec=160;
             }
         }
         else if(val==2){
             if(valP==1) {
                 ima.setImageResource(R.drawable.img_6);
-                des.setText("Audifonos de gato negro\n\n" + "Audifonos bluetooth inalambricos de diadema con radio FM, diseño de Gato negro.\n" + "Color: Negro\n\n$270");
+                des.setText("Audifonos de gato negro\n\n" + "Audifonos bluetooth inalambricos de diadema con radio FM, diseño de Gato negro.\n" + "Color: Negro\n$270");
                 prec=270;
             }
             else if(valP==2){
                 ima.setImageResource(R.drawable.img_7);
-                des.setText("Audifonos deportivos\n\n"+"Audífonos TWS inalámbricos deportivos con micrófono, intrauditivos con cancelación de ruido y manos libres.\n" + "Color: Multicolor\n\n$100");
+                des.setText("Audifonos deportivos\n\n"+"Audífonos TWS inalámbricos deportivos con micrófono, intrauditivos con cancelación de ruido y manos libres.\n" + "Color: Multicolor\n$100");
                 prec=100;
             }
             else if(valP==3){
                 ima.setImageResource(R.drawable.img_8);
-                des.setText("Audifonos con banda para cuello\n\n"+"Audífonos inalámbricos intraauriculares con banda para el cuello y micrófono para llamadas con manos libres.\n" + "Color: Negro\n\n$170");
+                des.setText("Audifonos con banda para cuello\n\n"+"Audífonos inalámbricos intraauriculares con banda para el cuello y micrófono para llamadas con manos libres.\n" + "Color: Negro\n$170");
                 prec=170;
             }
         }
         else if(val==3){
             if(valP==1) {
                 ima.setImageResource(R.drawable.img);
-                des.setText("Teclado flexible\n\n" + "Teclado flexible y plegable de Silicona resistente al agua para juegos USB mudo con 85 teclas. \n" + "Color: Negro\n\n$210");
+                des.setText("Teclado flexible\n\n" + "Teclado flexible y plegable de Silicona resistente al agua para juegos USB mudo con 85 teclas. \n" + "Color: Negro\n$210");
                 prec=210;
             }
             else if(valP==2){
                 ima.setImageResource(R.drawable.img_1);
-                des.setText("Teclado mini\n\n"+"Teclado mini con retroiluminación de 7 colores y touchpad con efecto de marquesina. \n" + "Color: Negro\n\n$160");
+                des.setText("Teclado mini\n\n"+"Teclado mini con retroiluminación de 7 colores y touchpad con efecto de marquesina. \n" + "Color: Negro\n$160");
                 prec=160;
             }
             else if(valP==3){
                 ima.setImageResource(R.drawable.img_2);
-                des.setText("Teclado inalámbrico\n\n"+"Teclado bluetooth inalámbrico con Touchpad integrado, multi-dispositivo con soporte para TV, teléfono tableta.\n" + "Color: Negro\n\n$300");
+                des.setText("Teclado inalámbrico\n\n"+"Teclado bluetooth inalámbrico con Touchpad integrado, multi-dispositivo con soporte para TV, teléfono tableta.\n" + "Color: Negro\n$300");
                 prec=300;
             }
         }
+
 
         men.setOnClickListener(new View.OnClickListener() {
             @Override
