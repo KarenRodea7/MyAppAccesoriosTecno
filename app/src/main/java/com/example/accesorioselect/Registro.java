@@ -28,11 +28,12 @@ public class Registro extends AppCompatActivity {
         usuario = findViewById(R.id.Usuario);
         cont = findViewById(R.id.Pass);
         direc = findViewById(R.id.Direc);
+        Reg = findViewById(R.id.Registrarse);
 
         Reg.setOnClickListener(new View.OnClickListener() {
-            Intent i = new Intent(getApplicationContext(), MainActivity.class);
             @Override
             public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), MainActivity.class);
                 Nom = nom.getText().toString();
                 GNom(Nom);
                 User = usuario.getText().toString();

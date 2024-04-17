@@ -109,20 +109,13 @@
                     android:textColorHint="#C4FFFFFF"
                     android:textColor="#ffffff"
                     android:textSize="18dp"/>
-                <EditText
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:hint=""
-                    android:inputType="phone"
-                    android:textColorHint="#C4FFFFFF"
-                    android:textColor="#ffffff"
-                    android:textSize="18dp"/>
 
             </LinearLayout>
         </LinearLayout>
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:id="@+id/Registrarse"
             android:layout_marginBottom="60dp"
             android:text="Registrarse"/>
 

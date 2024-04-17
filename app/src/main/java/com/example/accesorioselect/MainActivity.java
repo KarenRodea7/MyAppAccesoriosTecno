@@ -17,7 +17,8 @@ public class MainActivity extends AppCompatActivity {
 
     Button Registro, btnIniciar;
     EditText user, pass;
-    int sum, usu, pswd, nom;
+    int sum;
+    String usu, pswd, nom;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,8 +65,8 @@ public class MainActivity extends AppCompatActivity {
     }
     private void leerOpc() {
         preferences = getSharedPreferences("Credenciales", Context.MODE_PRIVATE);
-        usu = Integer.parseInt(preferences.getString("user", "0"));
-        pswd = Integer.parseInt(preferences.getString("pass", "0"));
-        nom = Integer.parseInt(preferences.getString("nombre", "0"));
+        usu = preferences.getString("user","No hay datos");
+        pswd = preferences.getString("pass", "No hay datos");
+        nom = preferences.getString("nombre", "No hay datos");
     }
 }

@@ -15,25 +15,27 @@ public class Menu extends AppCompatActivity {
     SharedPreferences preferences;
     ImageButton Fundas, Audif, Otro;
     TextView N;
-    int val, nom;
+    int val;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
-        leerOpc();
 
         Fundas = findViewById(R.id.Fundas);
         Audif = findViewById(R.id.Audif);
         Otro = findViewById(R.id.Otro);
         N = findViewById(R.id.Nom);
 
+        leerOpc();
+
         Fundas.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(getApplicationContext(), Productos.class);
                 val = 1;
+                Gval(val);
                 startActivity(i);
             }
         });
@@ -43,6 +45,7 @@ public class Menu extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(getApplicationContext(), Productos.class);
                 val = 2;
+                Gval(val);
                 startActivity(i);
             }
         });
@@ -68,7 +71,7 @@ public class Menu extends AppCompatActivity {
 
     private void leerOpc() {
         preferences = getSharedPreferences("Credenciales", Context.MODE_PRIVATE);
-        nom = Integer.parseInt(preferences.getString("nombre", "0"));
-        N.setText("Binvenido "+nom);
+        String nom = preferences.getString("nombre", "0");
+        N.setText("Binvenid@ "+nom);
     }
 }
